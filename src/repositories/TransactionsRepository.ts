@@ -10,20 +10,7 @@ interface Balance {
 
 @EntityRepository(Transaction)
 class TransactionsRepository extends Repository<Transaction> {
-  private transactions: Transaction[]
-
-  constructor(){
-    super()
-    this.transactions = [];
-  }
-
-  public all(): Transaction[]{
-    return this.transactions
-  }
-
-  public async getBalance(): Promise<Balance> {
-    const { income, outcome }
-  }
+  public async getBalance(): Promise<Balance> {}
 }
 
 export default TransactionsRepository;
